@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import MarkdownRenderer from './MarkdownRenderer';
 import ProgressBar from './ProgressBar';
 
@@ -41,12 +41,12 @@ const Presentation = ({ markdown, onEdit }) => {
       </div>
 
       {/* Edit button */}
-      <button
+      {/* <button
         onClick={onEdit}
         className="absolute top-4 right-4 px-3 py-1 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white transition"
       >
         Edit
-      </button>
+      </button> */}
 
       {/* Slide content */}
       <div className="flex-grow flex items-center justify-center">
@@ -56,14 +56,26 @@ const Presentation = ({ markdown, onEdit }) => {
       </div>
 
       {/* Control area */}
-      <div className="controls flex justify-center gap-4 my-4">
-        <button onClick={prevSlide} className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Previous page</button>
-        <span className="text-sm text-gray-600 dark:text-gray-300">{currentSlide + 1} / {slides.length}</span>
-        <button onClick={nextSlide} className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Next page</button>
+      <div className="controls flex justify-center items-end gap-6 mb-4">
+        <button 
+          onClick={prevSlide} 
+          className="px-5 py-2 rounded-full shadow hover:bg-blue-200 transition">
+          Previous page
+        </button>
+
+        <span className="text-sm text-gray-500 dark:text-gray-300 mb-[2px]">
+          {currentSlide + 1} / {slides.length}
+        </span>
+
+        <button 
+          onClick={nextSlide} 
+          className="px-5 py-2 rounded-full shadow hover:bg-blue-200 transition">
+          Next page
+        </button>
       </div>
 
-      {/* Progress bar */}
-      <div className="w-full px-4 mb-2">
+      {/* Progress bar at bottom */}
+      <div className="w-full px-4 pb-3">
         <ProgressBar current={currentSlide} total={slides.length} />
       </div>
     </div>
