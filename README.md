@@ -46,31 +46,41 @@ A lightweight PowerPoint-style web app that lets you create, edit, and present s
 ```bash
 git clone https://github.com/Roycegao/pdf-app.git
 ```
-cd my-ppt-app/
 
 ### 2. Install dependencies
+```bash
+cd my-ppt-app/
 npm install
-
+```
 ### 3. Start the frontend (Vite)
+```bash
 npm run dev
-
+```
 ✅ Visit http://localhost:5173
 
 #### 🧪 Run Unit Tests
+```bash
 npm run test
+```
 You can find tests under src/__tests__/.
 
 #### 📚 Run Storybook
+```bash
 npm run storybook
+```
 Storybook displays Editor, ProgressBar, MarkdownRenderer components in isolation.
 
 #### 📦 Build for Production
+```bash
 npm run build
+```
 This will output static files into the dist/ folder.
 
 ### 4. Start the backend (Node + SQLite)
+```bash
 cd my-ppt-app-server/
 npm init -y
 npm install express cors body-parser sequelize sqlite3
 node server.js
+```
 ✅ Visit http://localhost:3001
