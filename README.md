@@ -43,8 +43,9 @@ A lightweight PowerPoint-style web app that lets you create, edit, and present s
 
 ### 1. Clone the repo
 
-
+```bash
 git clone https://github.com/Roycegao/pdf-app.git
+```
 cd my-ppt-app/
 
 ### 2. Install dependencies
